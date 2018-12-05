@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// Complete the diagonalDifference function below.
 func diagonalDifference(arr [][]int32) int32 {
 
 	var diagA, diagB, result int32
@@ -52,7 +53,7 @@ func main() {
 
 	result := diagonalDifference(arr)
 
-	fmt.Printf("%d\n", result)
+	fmt.Fprintf(writer, "%d\n", result)
 
 }
 
