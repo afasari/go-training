@@ -9,7 +9,6 @@ import (
 	"strings"
 )
 
-// Complete the compareTriplets function below.
 func compareTriplets(a []int32, b []int32) []int32 {
 	var solutiona int32
 	var solutionb int32
@@ -27,15 +26,8 @@ func compareTriplets(a []int32, b []int32) []int32 {
 
 func main() {
 	reader := bufio.NewReaderSize(os.Stdin, 16 * 1024 * 1024)
-
-	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
-	checkError(err)
-
-	defer stdout.Close()
-
-	writer := bufio.NewWriterSize(stdout, 16 * 1024 * 1024)
-
 	aTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
+
 
 	var a []int32
 
@@ -60,16 +52,15 @@ func main() {
 	result := compareTriplets(a, b)
 
 	for i, resultItem := range result {
-		fmt.Fprintf(writer, "%d", resultItem)
+		fmt.Printf( "%d", resultItem)
 
 		if i != len(result) - 1 {
-			fmt.Fprintf(writer, " ")
+			fmt.Printf( " ")
 		}
 	}
 
-	fmt.Fprintf(writer, "\n")
+	fmt.Printf("\n")
 
-	writer.Flush()
 }
 
 func readLine(reader *bufio.Reader) string {
