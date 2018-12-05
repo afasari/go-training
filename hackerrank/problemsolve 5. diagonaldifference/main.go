@@ -9,7 +9,6 @@ import (
 	"strings"
 )
 
-// Complete the diagonalDifference function below.
 func diagonalDifference(arr [][]int32) int32 {
 
 	var diagA, diagB, result int32
