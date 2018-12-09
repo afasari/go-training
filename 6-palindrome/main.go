@@ -14,4 +14,5 @@ func isPalindrome(input string) bool {
 func main() {
 	fmt.Println(isPalindrome("anna"))
 	fmt.Println(isPalindrome("not a palindrome"))
+	fmt.Println(isPalindrome("Was it a car or a cat I saw?"))
 }
