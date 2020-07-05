@@ -2,12 +2,12 @@ package main
 
 import (
 	"bufio"
+	"bytes"
 	"fmt"
 	"io"
 	"os"
-	"strings"
 	"strconv"
-	"bytes"
+	"strings"
 )
 
 /*
@@ -47,12 +47,12 @@ func timeConversion(time string) string {
 }
 
 func main() {
-	reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
+	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 	s := readLine(reader)
 
 	result := timeConversion(s)
 
-	fmt.Printf( "%s\n", result)
+	fmt.Printf("%s\n", result)
 }
 
 func readLine(reader *bufio.Reader) string {

@@ -1,6 +1,8 @@
 package main
+
 import "fmt"
 import "net/http"
+
 func main() {
 	http.Handle("/static/",
 		http.StripPrefix("/static/",

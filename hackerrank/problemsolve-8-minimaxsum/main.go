@@ -32,9 +32,8 @@ func miniMaxSum(arr []int32) {
 	// end
 }
 
-
 func main() {
-	reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
+	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 
 	arrTemp := strings.Split(readLine(reader), " ")
 

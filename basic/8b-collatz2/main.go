@@ -6,12 +6,13 @@ import (
 	"strconv"
 	//"time"
 )
+
 func linear_collatz(init_num int) {
 	num := 0
 	count := 0
 	highest_number := 0
 	highest_count := 0
-	for i := 2; i < init_num; i++{
+	for i := 2; i < init_num; i++ {
 		num = i
 		count = 0
 		for {
@@ -21,9 +22,9 @@ func linear_collatz(init_num int) {
 
 			num1 := 0
 			if num%2 == 0 {
-				num1 = num/2
+				num1 = num / 2
 			} else {
-				num1 = ((3*num)+1)
+				num1 = ((3 * num) + 1)
 			}
 			num = num1
 			count = count + 1
@@ -43,7 +44,7 @@ func cached_linear_collatz(init_num int) {
 	count := 0
 	highest_number := 0
 	highest_count := 0
-	for i := 2; i < init_num; i++{
+	for i := 2; i < init_num; i++ {
 		num = i
 		count = 0
 		for {
@@ -59,9 +60,9 @@ func cached_linear_collatz(init_num int) {
 				break
 			} else {
 				if num%2 == 0 {
-					num1 = num/2
+					num1 = num / 2
 				} else {
-					num1 = ((3*num)+1)
+					num1 = ((3 * num) + 1)
 				}
 			}
 			num = num1

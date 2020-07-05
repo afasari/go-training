@@ -17,7 +17,7 @@ func gradingStudents(grades []int32) []int32 {
 	 * Write your code here.
 	 */
 	var arrayNum []int32
-	for _, original := range grades{
+	for _, original := range grades {
 		if original < 38 {
 			original = original
 		} else if original%5 >= 3 {
@@ -29,7 +29,7 @@ func gradingStudents(grades []int32) []int32 {
 }
 
 func main() {
-	reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
+	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 	nTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
 	checkError(err)
 	n := int32(nTemp)
@@ -46,14 +46,14 @@ func main() {
 	result := gradingStudents(grades)
 
 	for resultItr, resultItem := range result {
-		fmt.Printf( "%d", resultItem)
+		fmt.Printf("%d", resultItem)
 
-		if resultItr != len(result) - 1 {
-			fmt.Printf( "\n")
+		if resultItr != len(result)-1 {
+			fmt.Printf("\n")
 		}
 	}
 
-	fmt.Printf( "\n")
+	fmt.Printf("\n")
 
 }
 

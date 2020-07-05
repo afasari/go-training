@@ -6,12 +6,12 @@ import (
 )
 
 func main() {
-	a:="The quick brown fox jumps over the lazy dog"
+	a := "The quick brown fox jumps over the lazy dog"
 	b := searchword(a, "test")
 	fmt.Println(b)
 }
 
-func searchword(s string, kw string) bool{
+func searchword(s string, kw string) bool {
 	//for i:=0; i < len(s); i++{
 	//
 	//}

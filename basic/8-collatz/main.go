@@ -11,14 +11,14 @@ var figures = "0123456789"
 
 func isOdd(number string) bool {
 	last_val := number[len(number)-1:]
-	if ( last_val == "0" || last_val == "2" || last_val == "4" || last_val == "6" || last_val == "8" ) {
+	if last_val == "0" || last_val == "2" || last_val == "4" || last_val == "6" || last_val == "8" {
 		return false
 	}
 	return true
 }
 
 func srand(size int) string {
-	rand.Seed( time.Now().UnixNano())
+	rand.Seed(time.Now().UnixNano())
 	buf := make([]byte, size)
 	for i := 0; i < size; i++ {
 		buf[i] = figures[rand.Intn(len(figures))]
@@ -28,12 +28,12 @@ func srand(size int) string {
 
 func main() {
 	// Check arguments
-	if ( len(os.Args) < 2 ) {
+	if len(os.Args) < 2 {
 		fmt.Println("Must specify the size of the number in figures")
 		os.Exit(1)
 	}
 	figures_count, err := strconv.Atoi(os.Args[1])
-	if ( err != nil ) {
+	if err != nil {
 		fmt.Println(os.Args[1], "is not an integer")
 		os.Exit(2)
 	}
@@ -65,9 +65,9 @@ func main() {
 
 		// Some info
 		// while number is bigger or equal than stopping time
-		for n.Cmp( i ) != -1 {
+		for n.Cmp(i) != -1 {
 			// Check if it's even
-			if ( isOdd(n.String()) ) {
+			if isOdd(n.String()) {
 				// If odd multiplie by 3
 				n.Mul(n, three)
 				// And add one
@@ -80,14 +80,14 @@ func main() {
 			steps = steps + 1
 
 			// Display status every seconds
-			if( previous_time != time.Now().Unix()) {
+			if previous_time != time.Now().Unix() {
 				// Display status
 				fmt.Println(i.String(), "is at", steps, "steps")
 				// Save time counter
 				previous_time = time.Now().Unix()
 			}
 		}
-		if ( biggest_steps < steps ) {
+		if biggest_steps < steps {
 			fmt.Println("Biggest steps : ", i.String(), "has", biggest_steps, "steps")
 			biggest_steps = steps
 		}

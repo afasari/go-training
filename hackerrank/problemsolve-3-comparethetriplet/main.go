@@ -25,9 +25,8 @@ func compareTriplets(a []int32, b []int32) []int32 {
 }
 
 func main() {
-	reader := bufio.NewReaderSize(os.Stdin, 16 * 1024 * 1024)
+	reader := bufio.NewReaderSize(os.Stdin, 16*1024*1024)
 	aTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
-
 
 	var a []int32
 
@@ -52,10 +51,10 @@ func main() {
 	result := compareTriplets(a, b)
 
 	for i, resultItem := range result {
-		fmt.Printf( "%d", resultItem)
+		fmt.Printf("%d", resultItem)
 
-		if i != len(result) - 1 {
-			fmt.Printf( " ")
+		if i != len(result)-1 {
+			fmt.Printf(" ")
 		}
 	}
 

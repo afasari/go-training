@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Learning HTML/Template Function</title>
+    </head>
+    <body>
+        <!-- ESCAPE STRING -->
+        <p>
+            {{html "<h2>Hello</h2>"}}
+        </p>
+
+        <!-- OPERATOR PERBANDINGAN -->
+        {{if eq .Name "Bruce Wayne"}}
+        <p>I'm the Batman!</p>
+        {{else if ne .Name "Clark Kent"}}
+        <p>I'm neither Batman or Superman</p>
+        {{end}}
+
+        <!-- eq equal, sama dengan a == b
+        ne not equal, tidak sama dengan a != b
+        lt lower than, lebih kecil a < b
+        le lower than or equal, lebih kecil atau sama dengan a <= b
+        gt greater than, lebih besar a > b
+        ge greater than or equal, lebih besar atau sama dengan a >= b -->
+
+        <!-- PEMANGGILAN METHOD -->
+        {{.SayHello "Gotham citizen" "You are our hero!"}}
+
+        <!-- STRING -->
+        {{printf "%s because I'm %s" "You know why?" "Batman!"}}
+
+        <!-- print (merupakan alias dari fmt.Sprint )
+        printf (merupakan alias dari fmt.Sprintf )
+        println (merupakan alias dari fmt.Sprintln) -->
+
+        <!-- LEN dan INDEX -->
+        <p>
+            Batman have many friends. {{len .Friends}} of them are:
+            {{index .Friends 0}},
+            {{index .Friends 1}}, and
+            {{index .Friends 2}}
+        </p>
+
+        <!-- LOGIKA -->
+        {{$cond1 := true}}
+        {{$cond2 := false}}
+        {{if or $cond1 $cond2}}
+        <p>Be like Batman!</p>
+        {{end}}
+    </body>
+</html>

@@ -15,7 +15,7 @@ func isPalindrome(input string) bool {
 
 	fmt.Println(input)
 	for i := 0; i < len(input)/2; i++ {
-		if strings.EqualFold(string(input[i]) , string(input[len(input)-i-1])){
+		if strings.EqualFold(string(input[i]), string(input[len(input)-i-1])) {
 			return true
 		}
 		//if input[i] != input[len(input)-i-1] {

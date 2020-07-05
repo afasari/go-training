@@ -27,7 +27,7 @@ func birthdayCakeCandles(ar []int32) int32 {
 }
 
 func main() {
-	reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
+	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 	arCount, err := strconv.ParseInt(readLine(reader), 10, 64)
 	checkError(err)
 
@@ -44,7 +44,7 @@ func main() {
 
 	result := birthdayCakeCandles(ar)
 
-	fmt.Printf( "%d\n", result)
+	fmt.Printf("%d\n", result)
 }
 
 func readLine(reader *bufio.Reader) string {
